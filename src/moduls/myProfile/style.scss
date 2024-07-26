@@ -1,0 +1,441 @@
+@import '../../index.scss';
+
+
+.myProfile-container {
+    position: relative;
+
+    .pushs {
+        transform: translateX(-100%) scale(0);
+        margin-top: 44px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        background-color: rgba(4,0, 4, .1);
+        width: 100%;
+        height: 100vh;
+
+        main {
+            padding: 10px 20px 100px 20px;
+            height: 100vh;
+            max-width: 400px;
+            width: 100%;
+            background-color: white;
+            border-right: 1px solid black;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            .img {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                margin: 10px 0 20px 0;
+                cursor: pointer;
+            }
+
+
+
+            .messages {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                a {
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: start;
+                    gap: 15px;
+                    border-radius: 10px;
+                    border: 1px solid black;
+                    justify-content: space-between;
+
+                    &:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 5px 5px 20px black;
+                    }
+                }
+
+                span {
+                    font-size: 12px;
+                    color: darken(grey, 20%);
+                    font-family: $ff;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    font-size: 24px;
+                    font-family: $ff;
+                    font-weight: 900;
+                    color: black;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-family: $ff;
+                    font-weight: 600;
+                    color: black;
+                }
+            }
+
+            .empty-message {
+
+                p {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 700;
+                    cursor: default;
+                }
+            }
+        }
+
+    }
+    .pushs.block {
+        transform: translateX(0) scale(1);
+    }
+
+    .email {
+        background-color: $text-bgc;
+        padding: 20px 100px 0 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .on {
+            display: flex;
+            align-items: end;
+            gap: 25px;
+
+            .icons {
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+
+                .point {
+                    width: 10px;
+                    height: 10px;
+                    background-color: red;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 3px;
+                    right: -1px;
+                    z-index: 3;
+                }
+            }
+
+            .email.inner {
+                display: block;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 18px;
+                font-family: $ff;
+            }
+
+            span {
+                transform: translateY(10px);
+                font-size: 12px;
+                color: darken(grey, 20%);
+                font-family: $ff;
+                font-weight: 400;
+            }
+        }
+
+        a {
+            background-color: black;
+            color: white;
+            font-family: $ff;
+            font-size: 18px;
+            text-decoration: none;
+            max-width: 220px;
+            width: 100%;
+            text-align: center;
+            padding: 10px 15px;
+
+            &:hover {
+                box-shadow: 5px 5px 20px black;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .myProfile-header {
+        padding: 40px 100px;
+        width: 100%;
+        background-color: $text-bgc;
+        display: flex;
+        gap: 25px;
+        align-items: start;
+        border-bottom: 1px solid black;
+
+        .myProfile-img {
+
+            img {
+                max-width: 400px;
+                max-height: 400px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .myProfile-about {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-evenly;
+            gap: 25px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            span {
+                transform: translateY(10px);
+                font-size: 12px;
+                color: darken(grey, 20%);
+                font-family: $ff;
+                font-weight: 400;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 34px;
+                font-family: $ff;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 18px;
+                font-family: $ff;
+            }
+        }
+    }
+
+    .myContracts {
+        padding: 20px 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 28px;
+            font-family: $ff;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: $ff;
+            font-weight: 500;
+            border: 3px solid black;
+            color: black;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 5px 5px 20px black;
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+
+
+    .myProfile-contracts {
+        padding: 25px 0;
+        border-top: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(315px, 330px));
+        justify-content: center;
+        gap: 30px;
+
+
+        .contract {
+            text-decoration: none;
+            max-width: 330px;
+            width: 100%;
+            height: 540px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+            border: 1px solid black;
+            background-color: grey;
+            cursor: pointer;
+            border-top: 0;
+            border-bottom: 0;
+
+            div {
+
+                img {
+                    max-width: 330px;
+                    width: 100%;
+                }
+            }
+
+            .about {
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h3 {
+                    font-family: $ff;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: white;
+                }
+
+                p {
+                    font-family: $ff;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+
+            button {
+                padding: 5px 0;
+                font-size: 18px;
+                background-color: black;
+                width: 100%;
+                text-align: center;
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 5px 5px 50px black;
+            }
+        }
+
+        .contract.grab {
+            background-color: white;
+
+            .about {
+
+                h3 {
+                    color: black;
+                }
+
+                p {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .emptyPage {
+        border-top: 1px solid black;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+            font-family: $ff;
+            font-weight: 700;
+        }
+    }
+}
+
+
+@media(max-width: 920px) {
+    .myProfile-container {
+
+        .email {
+            padding: 20px 20px 0 20px;
+        }
+
+        .myProfile-header {
+            padding: 20px 20px;
+
+            .myProfile-about {
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 760px) {
+    .myProfile-container {
+        .email {
+            background-color: $text-bgc;
+            padding: 20px 20px 0 20px;
+            width: 100%;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 25px;
+
+            a {
+                font-size: 16px;
+            }
+
+            .on {
+                align-items: start;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .myProfile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            .myProfile-img {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 400px;
+                    width: 100%;
+                }
+            }
+
+            .myProfile-about {
+
+                h2 {
+                    font-size: 26px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .myContracts {
+            padding: 20px;
+            flex-direction: column-reverse;
+            gap: 25px;
+        }
+
+        .emptyPage {
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+}

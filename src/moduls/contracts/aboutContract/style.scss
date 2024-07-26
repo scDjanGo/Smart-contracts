@@ -1,0 +1,167 @@
+@import '../../../index.scss';
+
+
+.aboutContract-container {
+
+
+    .contract {
+        padding: 40px 80px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        flex-direction: column;
+        background-color: $text-bgc;
+
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: $ff;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: $ff;
+        }
+
+        .title {
+            width: 100%;
+
+            h2 {
+                font-size: 38px;
+                font-family: $ff;
+                font-weight: 900;
+            }
+        }
+
+
+        .creator {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        .time {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        .descrition {
+            width: 100%;
+        }
+
+        .content {
+            width: 100%;
+
+            h4 {
+                font-size: 20px;
+                font-weight: 700;
+                font-family: $ff;
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+
+            button {
+                width: 250px;
+                padding: 10px 20px;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+                background-color: red;
+                color: white;
+                cursor: pointer;
+                border: 3px solid black;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 5px 5px 20px black;
+                }
+            }
+
+            a {
+                width: 250px;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 500;
+                background-color: red;
+                color: white;
+                border: 3px solid black;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 5px 5px 20px black;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 920px) {
+    .aboutContract-container {
+
+
+        .contract {
+            padding: 40px 20px;
+
+            .buttons {
+
+                button {
+                    width: 220px;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                a {
+                    width: 220px;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 720px) {
+    .aboutContract-container {
+
+        div {
+            flex-direction: column;
+            gap: 25px;
+        }
+
+
+        .contract {
+
+            .buttons {
+                align-items: start;
+                flex-direction: column;
+
+                button {
+                    width: 220px;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                a {
+                    width: 220px;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

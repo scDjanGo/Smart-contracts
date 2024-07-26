@@ -1,0 +1,766 @@
+@import '../../index.scss';
+
+
+.main-container {
+    margin-bottom: 400px;
+
+
+    .razrab {
+        padding: 40px 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        h2 {
+            font-family: $ff;
+            font-weight: 800;
+            font-size: 48px;
+        }
+
+        p {
+            font-family: $ff;
+            font-weight: 600;
+            font-size: $fsz;
+            line-height: 2;
+        }
+    }
+
+    .smart-contarct-key {
+        padding: 60px 100px;
+        display: flex;
+        align-items: start;
+        background-color: $text-bgc;
+
+        .left {
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            h2 {
+                font-family: $ff;
+                font-weight: 800;
+                font-size: 36px;
+            }
+
+            p {
+                font-family: $ff;
+                font-weight: 600;
+                font-size: $fsz;
+                line-height: 2;
+            }
+        }
+
+        .right {
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            p {
+                font-family: $ff;
+                font-weight: 600;
+                font-size: $fsz;
+                line-height: 2;
+            }
+
+            ul {
+                transform: translateX(15px);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+
+                li {
+                    font-family: $ff;
+                    font-weight: 600;
+                    font-size: $fsz;
+                    line-height: 2;
+
+                    &::marker {
+                        color: red;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    .why-smart {
+        padding: 60px 100px;
+
+        h2 {
+            margin-bottom: 35px;
+            font-family: $ff;
+            font-weight: 800;
+            font-size: 44px;
+        }
+
+        .why-inner {
+            display: flex;
+            align-items: start;
+            gap: 35px;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+            }
+
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+            }
+
+
+            .block {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .zag {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img {
+                        width: 28px;
+                    }
+
+                    p {
+                        font-family: $ff;
+                        font-weight: 600;
+                        font-size: $fsz;
+                        line-height: 2;
+                    }
+                }
+
+                h3 {
+                    font-family: $ff;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+
+                p {
+                    font-family: $ff;
+                    font-weight: 400;
+                    font-size: $fsz;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+
+
+    .whyWeDoing {
+        padding: 60px 100px;
+        display: flex;
+        align-items: start;
+        gap: 35px;
+        background-color: $text-bgc;
+
+        h2 {
+            margin-bottom: 25px;
+            font-family: $ff;
+            font-weight: 900;
+            font-size: 48px;
+        }
+
+        .texts {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            h3 {
+                font-family: $ff;
+                font-weight: 800;
+                font-size: 18px;
+            }
+
+            p {
+                font-family: $ff;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 2;
+            }
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            transform: translateY(-12px);
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+
+    .howWeWork {
+        padding: 60px 100px;
+
+        h4 {
+            margin-bottom: 35px;
+            font-family: $ff;
+            font-weight: 900;
+            font-size: 48px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 35px;
+
+            .step {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h3 {
+                        color: red;
+                        font-size: 22px;
+                        font-family: $ff;
+                        font-weight: 700;
+                    }
+
+                    .line {
+                        padding: 1px;
+                        background-color: $text-bgc;
+                        width: 90%;
+                    }
+
+                    img {
+                        transform: translateX(-18px);
+                    }
+                }
+
+                h2 {
+                    font-size: 18px;
+                    font-family: $ff;
+                    font-weight: 900;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-family: $ff;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .technology {
+        background-color: $text-bgc;
+        padding: 60px 110px 240px 110px;
+        position: relative;
+
+        h2 {
+            transform: translateX(-15px);
+            font-family: $ff;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 25px;
+        }
+
+        div {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                li {
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: $ff;
+
+                    &::marker {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        .black-outer {
+            padding: 60px 40px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .black {
+                padding: 60px 40px;
+                background-color: black;
+                display: flex;
+                gap: 35px;
+
+                h3 {
+                    max-width: 600px;
+                    width: 100%;
+                    color: white;
+                    font-size: 46px;
+                    font-family: $ff;
+                    font-weight: 900;
+                    line-height: 1.5;
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 35px;
+
+
+                    ul {
+
+                        li {
+                            color: white;
+                            line-height: 2;
+                        }
+                    }
+
+                    a {
+                        padding: 20px 0;
+                        text-align: center;
+                        width: 100%;
+                        background-color: red;
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: white;
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 5px 5px 30px red;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@media(max-width: 920px) {
+    .main-container {
+        .razrab {
+            padding: 40px 60px;
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .smart-contarct-key {
+            padding: 60px 60px;
+
+            .left {
+                gap: 25px;
+
+                h2 {
+                    font-size: 36px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .right {
+                gap: 25px;
+
+                p {
+                    font-size: 12px;
+                }
+
+                ul {
+
+
+                    li {
+                        font-size: 12px;
+                    }
+
+                }
+            }
+        }
+
+
+        .why-smart {
+            padding: 60px 60px;
+
+            h2 {
+                margin-bottom: 25px;
+                font-size: 38px;
+            }
+
+            .why-inner {
+                gap: 25px;
+
+                .left {
+                    gap: 25px;
+                }
+
+
+                .right {
+                    gap: 25px;
+                }
+
+
+                .block {
+
+                    .zag {
+
+                        img {
+                            width: 26px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+
+        .whyWeDoing {
+            padding: 60px ;
+            gap: 25px;
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .texts {
+                gap: 25px;
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .left {
+                gap: 25px;
+            }
+
+            .right {
+                gap: 25px;
+            }
+        }
+
+
+        .howWeWork {
+            padding: 60px 60px;
+
+            h4 {
+                margin-bottom: 25px;
+                font-size: 32px;
+            }
+
+            .steps {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 25px;
+
+                .step {
+
+                    div {
+
+                        h3 {
+                            font-size: 20px;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 16px;
+                        font-weight: 800;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .technology {
+
+            h2 {
+                font-size: 32px;
+            }
+
+            div {
+
+                ul {
+                    gap: 25px;
+
+                    li {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .black-outer {
+                padding: 60px 40px;
+
+                .black {
+                    padding: 60px 40px;
+                    gap: 25px;
+
+                    h3 {
+                        font-size: 38px;
+                    }
+
+                    .right {
+                        gap: 25px;
+
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 800px) {
+    .main-container {
+        margin-bottom: 0;
+        .razrab {
+            padding: 40px 20px;
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .smart-contarct-key {
+            padding: 60px 20px;
+            flex-direction: column;
+
+            .left {
+                gap: 25px;
+                padding: 0;
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .right {
+                gap: 25px;
+
+                p {
+                    font-size: 16px;
+                }
+
+                ul {
+
+
+                    li {
+                        font-size: 16px;
+                    }
+
+                }
+            }
+        }
+
+
+        .why-smart {
+            padding: 60px 20px;
+
+            h2 {
+                margin-bottom: 25px;
+                font-size: 38px;
+            }
+
+            .why-inner {
+                gap: 25px;
+                flex-direction: column;
+
+                .left {
+                    gap: 25px;
+                }
+
+
+                .right {
+                    gap: 25px;
+                }
+
+
+                .block {
+
+                    .zag {
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+
+        .whyWeDoing {
+            padding: 40px 20px;
+            flex-direction: column;
+            gap: 25px;
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .texts {
+                gap: 25px;
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .left {
+                gap: 25px;
+            }
+
+            .right {
+                gap: 25px;
+            }
+        }
+
+
+        .howWeWork {
+            padding: 60px 20px;
+
+            h4 {
+                margin-bottom: 25px;
+                font-size: 32px;
+            }
+
+            .steps {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 25px;
+
+                .step {
+
+                    div {
+
+                        h3 {
+                            font-size: 20px;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 16px;
+                        font-weight: 800;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .technology {
+            padding: 40px 0;
+
+            h2 {
+                padding: 0 40px;
+                font-size: 28px;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                ul {
+                    padding: 0 40px;
+                    gap: 25px;
+
+                    li {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .black-outer {
+                transform: translateY(25px);
+                padding: 0;
+                position: relative;
+
+                .black {
+                    padding: 60px 20px;
+                    gap: 25px;
+
+                    h3 {
+                        font-size: 38px;
+                    }
+
+                    .right {
+                        gap: 25px;
+
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

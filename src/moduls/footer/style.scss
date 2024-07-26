@@ -1,0 +1,170 @@
+@import '../../index.scss';
+
+
+.footer-container {
+    border-top: 1px solid black;
+    padding: 60px 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+
+    .year {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h2 {
+            font-family: $ff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        p {
+            font-family: $ff;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h2 {
+            font-family: $ff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            span {
+                font-family: $ff;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            h3 {
+                font-family: $ff;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            p {
+                font-family: $ff;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .adress {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        span {
+            font-family: $ff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        p {
+            font-family: $ff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    .rekvizits {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+
+        span {
+            font-family: $ff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            span {
+                font-family: $ff;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            h3 {
+                font-family: $ff;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            p {
+                font-family: $ff;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media(max-width: 900px) {
+
+    .footer-container {
+        padding: 40px 20px;
+
+        .year {
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        .contacts {
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        .adress {
+
+            span {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .rekvizits {
+
+            span {
+                font-size: 22px;
+            }
+
+            div {
+
+                h3 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 640px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
