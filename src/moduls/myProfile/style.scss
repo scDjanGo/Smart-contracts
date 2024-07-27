@@ -268,10 +268,10 @@
             justify-content: space-between;
             gap: 25px;
             border: 1px solid black;
-            background-color: grey;
             cursor: pointer;
             border-top: 0;
             border-bottom: 0;
+            background-color: green;
 
             div {
 
@@ -319,8 +319,8 @@
             }
         }
 
-        .contract.grab {
-            background-color: white;
+        .contract.wait {
+            background-color: yellow;
 
             .about {
 
@@ -330,6 +330,21 @@
 
                 p {
                     color: black;
+                }
+            }
+        }
+
+        .contract.grab {
+            background-color: grey;
+
+            .about {
+
+                h3 {
+                    color: white;
+                }
+
+                p {
+                    color: white;
                 }
             }
         }

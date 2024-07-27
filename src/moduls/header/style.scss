@@ -24,6 +24,8 @@
         display: flex;
         gap: 35px;
         align-items: center;
+        position: relative;
+        z-index: 32;
 
         a {
             padding: 5px 10px;

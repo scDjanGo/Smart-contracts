@@ -175,7 +175,7 @@ function MyProfile() {
                       to={`/contract/${contract.id}`}
                       key={contract.id}
                       className={`contract ${
-                        contract.status === "черновик" || "grab"
+                        contract.status === "черновик" ? "grab" : contract.status === "ожидается подпись" ? 'wait' : ''
                       }`}
                     >
                       <div>

@@ -171,9 +171,10 @@
 #pushMessage-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     position: absolute;
     z-index: 31;
+    top: 0;
     transform: translateY(-100%) scale(0);
 
     .pushMessage {

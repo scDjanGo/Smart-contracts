@@ -11,6 +11,7 @@ function AddContract() {
     const [titles, setTitles] = useState([]);
     const [users, setUsers] = useState([]);
     const [inputUsers, setInputUsers] = useState([]);
+    const [target, setTarget] = useState('')
 
     useEffect(() => {
         setFetching(true);
@@ -28,8 +29,7 @@ function AddContract() {
     useEffect(() => {
         axios.get('https://azamat412.pythonanywhere.com/api/auth/users/')
             .then(res => {
-                console.log(res.data);
-                setUsers(res.data);
+                setUsers(res.data.filter(user => user.username !== myAccount.username));
             })
             .catch(err => console.error('Error fetching users:', err));
     }, []);
@@ -75,7 +75,7 @@ function AddContract() {
                         pushMessage.firstElementChild.textContent = `Контракт "${data.title}" добавлен!`;
                         setTimeout(() => {
                             pushMessage.classList.remove('on');
-                        }, 3000);
+                        }, 1500);
                     }
                 }, 500);
             }).catch(err => {
@@ -96,6 +96,14 @@ function AddContract() {
             setInputUsers(filteredUsers);
         }
     };
+
+    const handleTarget = (e) => {
+        setTarget(e)
+    } 
+
+    const handleSt = (e) => {
+        setTarget(e.target.value)
+    }
 
     return (
         <div className='singUp-container'>
@@ -127,18 +135,19 @@ function AddContract() {
                             id='inputSearch'
                             type="text"
                             placeholder='Имя пользователя'
-                            onChange={(e) => handleSearchUsers(e)}
+                            value={target}
+                            onChange={(e) => {handleSearchUsers(e); handleSt(e)}}
                         />
 
                         {inputUsers && inputUsers.length > 0 ? (
                             <div>
                                 {inputUsers.map((user, index) => (
-                                    <p style={{ margin: '5px 0', borderBottom: '1px solid black', fontSize: '22px' }} key={index}>{user.username}</p>
+                                    <p style={{ margin: '5px 0', borderBottom: '1px solid black', fontSize: '22px', cursor: 'pointer' }} key={index} onClick={() => handleTarget(user.username)}>{user.username}</p>
                                 ))}
                             </div>
-                        ) : (
-                            <p>Такого пользователя нету</p>
-                        )}
+                        ) : 
+                            <p>{target && 'Такого пользователя нету'}</p>
+                        }
 
                         {errorMessage && <p className='errorMessage'>{errorMessage}</p>}
                         <button type="submit">Добавить</button>
