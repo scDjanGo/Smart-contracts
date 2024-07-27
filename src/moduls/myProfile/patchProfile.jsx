@@ -13,7 +13,6 @@ function PatchProfile() {
 
   const getPatchAcc = async (e) => {
     e.preventDefault();
-    // setFetching(true);
 
     const formData = Object.fromEntries(new FormData(e.target).entries());
     formData.role = "Legal_entities";
@@ -59,15 +58,10 @@ function PatchProfile() {
     } catch (error) {
       console.error(error);
     } finally {
-      // setFetching(false);
     }
   };
 
-  // const handleShow = () => {
-  //     setShowPassport(prev => !prev)
-  // }
 
-  console.log(values);
 
   return (
     <div className="patchProfile-container">
@@ -75,7 +69,7 @@ function PatchProfile() {
         {myAccount.role === "individuals" ? (
           <>
             <p className="role">Физическое лицо</p>
-            <form>
+            <form onSubmit={getPatchAcc}>
               <span>Имя пользоваетля</span>
               <input
                 name="username"

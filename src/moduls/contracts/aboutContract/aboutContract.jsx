@@ -97,7 +97,8 @@ function AboutContract() {
             .catch(err => console.error(err))
     }
 
-    console.log(contract);
+
+
     return (
         <div className="aboutContract-container">
             {fetching ?
@@ -110,6 +111,7 @@ function AboutContract() {
                 :
                 <>
                     <div className="contract">
+
                         <div className="title">
                             <h2>{contract.title}</h2>
                         </div>
